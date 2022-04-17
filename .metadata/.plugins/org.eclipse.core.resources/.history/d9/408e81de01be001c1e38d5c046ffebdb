@@ -1,0 +1,31 @@
+package com.bitcamp.web;
+/*
+ * 서블릿 만들기
+ */
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class Hello extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		
+		// 다국어 지원을 위해서 PrintStream이 아닌 Writer를 사용
+		PrintWriter out = resp.getWriter(); 
+		out.println("Hello Servlet!!!");
+		out.println("안녕 서블릿!!!");
+		
+		/* 톰캣 web.xml에서 서블릿class가 url과 매핑 작업이 필요
+		 * 톰캣의 web.xml 파일 복사 webapp/WEB-INF/ 붙여넣기
+		 *  
+		 */
+		
+	}
+}

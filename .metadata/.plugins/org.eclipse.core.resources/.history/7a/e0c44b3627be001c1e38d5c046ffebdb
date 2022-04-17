@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Get/Post요청</title>
+</head>
+<body>
+	<div>
+	<!-- 서블릿 매핑 주소(actiotn): 전송버튼을 누르면 order서블릿으로 요청  
+		 http://localhost:8080/order
+		 name속성(키)값이 있으면
+		 http://localhost:8080/order?cnt=3(입력값)
+		 으로 전달
+	-->
+		<form action="order">
+			<div>
+				<label>주문개수를 입력하세요</label>
+			</div>
+			<div>
+				<input type="text" name="cnt"/>
+				<input type="submit" value="전송"/>
+			</div>
+		</form>
+	</div>
+	
+	<div>
+	<br>
+	<hr>
+	<!-- 서블릿 매핑 주소(actiotn): 전송버튼을 누르면 notice-reg서블릿으로 요청  
+		 http://localhost:8080/notice-reg
+		 http://localhost:8080/notice-reg?title=공지&content=지각금지!
+		 이것은 get 요청(쿼리 스트링으로 전달)
+		 
+		 이건 url 길이 제안 장문의 내용을 쿼리 스트링으로 전달하는 것은 적절하지 않다.
+		 따라서 url에 붙여서 전달하지 말고 요청(request) body에 붙여서 전달한다.
+		 그것이 post 방식(method="post" : method생략 시 method="get"이 디폴트이다)
+	-->
+		<form action="notice-reg" method="post">
+			<div>
+				<label>제목:</label>
+				<input name="title" type="text">
+			</div><br>
+			<div>
+				<label>내용:</label>
+				<textarea name="content" rows="" cols=""></textarea>
+			</div><br>			
+			<div>
+				<input type="submit" value="등록"/>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Get요청</title>
+</head>
+<body>
+	<div>
+	<!-- 서블릿 매핑 주소: 전송버튼을 누르면 order서블릿으로 요청  
+		 http://localhost:8080/order
+		 name속성(키)값이 있으면
+		 http://localhost:8080/order?cnt=3(입력값)
+		 으로 전달
+	-->
+		<form action="order">
+			<div>
+				<label>주문개수를 입력하세요</label>
+			</div>
+			<div>
+				<input type="text" name="cnt"/>
+				<input type="submit" value="전송"/>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

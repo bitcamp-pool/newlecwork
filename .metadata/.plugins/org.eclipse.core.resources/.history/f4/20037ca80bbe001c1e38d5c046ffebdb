@@ -1,0 +1,30 @@
+package com.bitcamp.web;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * 브라우저에 컨텐츠 형식을 알려주기
+ * : 해석기에게 명시하지 않은 경우 브라우저가 자의적인(html/text) 해석을 방지
+ *   한글 깨짐 해결
+ */
+@WebServlet("content")
+public class Ex03_Contents extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		
+		PrintWriter out = resp.getWriter();
+		for(int i=0; i<6; i++)
+			System.out.printf("<h%d>안녕 서블릿!</h%d><br>/n", i+1, i+1);
+//			out.printf("<h%d>안녕 서블릿!</h%d><br>", i+1, i+1);
+	}
+}

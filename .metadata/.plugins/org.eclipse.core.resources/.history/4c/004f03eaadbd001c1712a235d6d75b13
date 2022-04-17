@@ -1,0 +1,14 @@
+자바 서버 어플리케이션 만들기
+GET : /notice/list
+..
+..
+수많은 조각들이 존재(서블릿)
+main() ----> service()로 동작
+
+WAS서버에 의해서 클래스 객체 로드가 되고 결과를 반환
+추상클래스 HttpServlet의 service()를 구현한 클래스를 찾음
+public class extends HttpServlet {
+	public void service(HttpServletRequses request, HttpServletResponse response){
+		System.out.println("Hello Servlet");
+	}
+}

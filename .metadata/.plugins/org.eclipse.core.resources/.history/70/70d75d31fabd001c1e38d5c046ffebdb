@@ -1,0 +1,24 @@
+<!-- 
+	실행(ctrl + F11) : 이문서는  
+	톰캣의 디렉토리로 옮겨지고 WAS가 실행된 후
+	이클립스가 브라우저를 띄워서 index.html을 요청
+	톰캣으로 배포된 디렉토리에 있는 파일이 실행된다.
+	
+	Window->Web Broswer 설정
+	요청url을 살펴보면...프로젝트 이름이...
+	http://localhost:8080/JSPprj/index.html
+	
+	프로젝트>우클릭>Properties>Web Project Settings에서
+	Context root: / 로 바꿈
+	
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	환영합니다.....^^
+</body>
+</html>

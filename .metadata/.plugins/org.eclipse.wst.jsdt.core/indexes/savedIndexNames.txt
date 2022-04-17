@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+C:\DevPool\newlecture\newlecwork\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3065608919.index
+3792356413.index
+927968205.index
+2281387116.index
+2140639284.index
+2724792820.index
+2892387911.index
+2724792820.index

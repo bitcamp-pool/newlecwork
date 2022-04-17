@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Get요청</title>
+</head>
+<body>
+	<div>
+		<form action="order">
+			<div>
+				<label>주문개수를 입력하세요</label>
+			</div>
+			<div>
+				<input type="text" name="cnt"/>
+				<input type="submit" value="출력"/>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+1. 자바웹프로그램 
+	> 서블릿(API) 구현 : 자바에서 HTML 코드 생성)
+		> HTML 코드 출력 문제
+			> JSP : HTML에서 자바코드 생성
+				> 스파케티 코드 문제
+					> JSP MVC 디자인 패턴 : 코드 정리
+						> 스프링 MVC 디자인 패턴 : 프레임워크 사용 
+						
+
+[클라이언트]--------RPC(remote procedure call)소켓---------[서버]
+  UI APP												 웹 SERVER APP
+  browser					  http://	                 WAS : Web Application Server 
+				Request----------------------------------->
+				<----------------------------------Response								
+												
+서블릿 : Server Application Let(서버어플리케이션 조각)
+          서브릿단위의 파편화 된 어플리케이션 개발
+												
+* RPC : 다른 주소 공간에서 함수나 프로시저를 실행할 수 있게하는 프로세스 간 통신 기술																	
+
+
+2. 실습환경
+   (웹서버 + WAS)
+   톰캣설치 : 
+   		인스톨버전(웹서비스 용) / 압축버전
+   		apache-tomcat-9.0.62\bin startup.bat 실행(JAVA_HOME, 포트8080 충돌 확인)
+   		localhost:8080 브라우저 웹페이지 출력 확인
+   
+   localhost:8080/ ('/'은 홈디렉토리를 의미) 
+   localhost:8080/index.html (default 페이지가 index.html)
+   
+   홈디렉토리에 hello.txt 파일 생성
+   http://localhost:8080/hello.txt
+   C:\DevPool\newlecture\tools\apache-tomcat-9.0.62\webapps\ROOT
+   
+
+3. Context 사이트 추가하기
+	http://IP(HostName):Port/context/리소스들
+	네이버
+	커다란 문맥은 유지하면서 팀별로 폴더를 떼어버리고 연결하여 사용
+	Context : 분할된 폴터를 가상 경로, 가상 사이트로 서비스
+	홈디렉토리에 it/news.txt 출력 후 ----> 다른 경로로 이동
+	이것을 기존 경로로 마치 하나의 폴더에 소속된것처럼 운용하고 싶을 때...
+	C:\DevPool\newlecture\tools\apache-tomcat-9.0.62\conf 안에 server.xml 수정
+	<Host>
+		<Context path="it" docBase="C:\DevPool\newlecture\tools\apache-tomcat-9.0.62\webapps\IT_SECTION"><Context>
+	</Host>
+	서버 재기동  
+   
+   
+   
+   
+   
