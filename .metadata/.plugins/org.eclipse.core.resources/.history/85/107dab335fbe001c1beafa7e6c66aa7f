@@ -17,7 +17,6 @@ import javax.servlet.http.HttpServletResponse;
  * 					: 세션(현재 접속한 사용자) 마다 저장공간이 달라짐
  * 					: 브라우저가 다르면 다른 사용자로 처리(서버는 JSESSIONID=62D84EA4A80356A72E453300EF6DEC5E로 사용자 식별)
  * 3. cookie	  > 클라이언트의 저장소(크롬 개인정보 및 보안 항목> 쿠키 및 기타 사이트 데이터 > 모든 쿠키 보기
- * 					: 쿠키는 모든 페이지마다 동일한가? No 관련 서블릿에게만..
  * 4. hidden input
  * 5. querystring
  */
@@ -82,12 +81,6 @@ public class Ex11_Calc2 extends HttpServlet {
 			// 저장할 쿠키 2개 생성
 			Cookie valueCookie = new Cookie("value", String.valueOf(v));
 			Cookie opCookie = new Cookie("op", op);
-			
-			
-			// valueCookie.setPath("/"); 		// 모든 url 요청시 쿠키 전달
-			// valueCookie.setPath("/add"); 	// 모든 add 요청시 쿠키 전달
-			valueCookie.setPath("/calc2");  // clac2만
-			
 			// 쿠키 전송(클라이언트 전달)
 			response.addCookie(valueCookie);
 			response.addCookie(opCookie);

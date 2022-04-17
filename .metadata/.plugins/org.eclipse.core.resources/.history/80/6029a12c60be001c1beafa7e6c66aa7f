@@ -83,10 +83,7 @@ public class Ex11_Calc2 extends HttpServlet {
 			Cookie valueCookie = new Cookie("value", String.valueOf(v));
 			Cookie opCookie = new Cookie("op", op);
 			
-			
-			// valueCookie.setPath("/"); 		// 모든 url 요청시 쿠키 전달
-			// valueCookie.setPath("/add"); 	// 모든 add 요청시 쿠키 전달
-			valueCookie.setPath("/calc2");  // clac2만
+			valueCookie.setPath("/");
 			
 			// 쿠키 전송(클라이언트 전달)
 			response.addCookie(valueCookie);
