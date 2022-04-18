@@ -1,0 +1,17 @@
+package com.bitcamp.mysql;
+
+public class DbConnect {
+	static final String DRIVER 	= "com.mysql.cj.jdbc.Driver";
+	static final String URL 	= "jdbc:mysql://localhost:3306/bit901?serverTimezone=Asia/Seoul";
+	
+	public DbConnect() {
+		try {
+			Class.forName(DRIVER);
+			System.out.println("Mysql 드라이버 성공");
+		} catch (ClassNotFoundException e) {
+			System.out.println("Mysql 드라이버 오류" + e.getMessage());
+		}
+	}
+	
+	
+}

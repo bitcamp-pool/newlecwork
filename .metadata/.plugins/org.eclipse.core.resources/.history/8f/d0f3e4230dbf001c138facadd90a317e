@@ -1,0 +1,5 @@
+package com.bitcamp.mysql;
+
+public class DbConnect {
+
+}
